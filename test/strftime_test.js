@@ -7,26 +7,26 @@ testCase("strftime test", {
 
   "test format specifier %Y": function () {
     assert("%Y should return full year",
-           this.date.strftime("%Y") === "2009");
+           Date.formats.Y(this.date) === 2009);
   },
 
   "test format specifier %m": function () {
     assert("%m should return month",
-           this.date.strftime("%m") === "10");
+           Date.formats.m(this.date) === "10");
   },
 
   "test format specifier %d": function () {
     assert("%d should return date",
-           this.date.strftime("%d") === "02");
+           Date.formats.d(this.date) === "02");
   },
 
   "test format specifier %y": function () {
     assert("%y should return year as two digits",
-           this.date.strftime("%y") === "09");
+           Date.formats.y(this.date) === "09");
   },
 
   "test format shorthand %F": function () {
-    assert("%F should act as %Y-%m-%d",
-           this.date.strftime("%F") === "2009-10-02");
+    assert("%F should be shortcut for %Y-%m-%d",
+           Date.formats.F === "%Y-%m-%d");
   }
 });
