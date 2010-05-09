@@ -1,4 +1,4 @@
-/*jslint indent: 2, eqeqeq: false*/
+/*jslint indent: 2, eqeqeq: false, onevar: false*/
 Date.prototype.strftime = (function () {
   function strftime(format) {
     var date = this;
@@ -37,6 +37,14 @@ Date.prototype.strftime = (function () {
 
     Y: function (date) {
       return date.getFullYear();
+    },
+
+    j: function (date) {
+      var jan1 = new Date(date.getFullYear(), 0, 1);
+      var diff = date.getTime() - jan1.getTime();
+
+      // 86400000 == 60 * 60 * 24 * 1000
+      return Math.ceil(diff / 86400000);
     },
 
     // Format shorthands
