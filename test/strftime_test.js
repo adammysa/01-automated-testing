@@ -1,5 +1,5 @@
 /*jslint indent: 2*/
-/*globals assert, console*/
+/*globals assert, output*/
 var date = new Date(2009, 9, 2);
 
 try {
@@ -14,7 +14,7 @@ try {
   assert("%F should act as %Y-%m-%d",
          date.strftime("%F") === "2009-10-02");
 
-  console.log(assert.count + " tests OK");
+  output(assert.count + " tests OK", "#0c0");
 } catch (e) {
-  console.log("Test failed: " + e.message);
+  output("Test failed: " + e.message, "#c00");
 }
