@@ -1,0 +1,26 @@
+{
+  "name": "01-automated-testing",
+  "version": "1.0.0",
+  "description": "repo for chapter 1 of Johansen",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib",
+    "test": "test"
+  },
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/adammysa/01-automated-testing.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/adammysa/01-automated-testing/issues"
+  },
+  "homepage": "https://github.com/adammysa/01-automated-testing#readme",
+  "dependencies": {
+    "jest": "^23.2.0"
+  }
+}
